@@ -1,0 +1,6 @@
+@EVCS.SOAPAPIServices.TriNM_HostAddress = http://localhost:5046
+
+GET {{EVCS.SOAPAPIServices.TriNM_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,320 @@
+{
+	"info": {
+		"_postman_id": "evcs-soap-api-collection",
+		"name": "EVCS SOAP API - Station Service",
+		"description": "SOAP API Collection for EV Charging Station Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAllAsync",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml; charset=utf-8"
+					},
+					{
+						"key": "SOAPAction",
+						"value": "http://tempuri.org/IStationSOAPServices/GetAllAsync"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GetAllAsync xmlns=\"http://tempuri.org/\">\n    </GetAllAsync>\n  </soap:Body>\n</soap:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5046/StationService.asmx",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "5046",
+					"path": ["StationService.asmx"]
+				},
+				"description": "Lấy tất cả stations bao gồm cả inactive"
+			}
+		},
+		{
+			"name": "GetAsync",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml; charset=utf-8"
+					},
+					{
+						"key": "SOAPAction",
+						"value": "http://tempuri.org/IStationSOAPServices/GetAsync"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GetAsync xmlns=\"http://tempuri.org/\">\n      <id>1</id>\n    </GetAsync>\n  </soap:Body>\n</soap:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5046/StationService.asmx",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "5046",
+					"path": ["StationService.asmx"]
+				},
+				"description": "Lấy station theo ID"
+			}
+		},
+		{
+			"name": "SearchStationsAsync",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml; charset=utf-8"
+					},
+					{
+						"key": "SOAPAction",
+						"value": "http://tempuri.org/IStationSOAPServices/SearchStationsAsync"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <SearchStationsAsync xmlns=\"http://tempuri.org/\">\n      <searchTerm>ST001</searchTerm>\n    </SearchStationsAsync>\n  </soap:Body>\n</soap:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5046/StationService.asmx",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "5046",
+					"path": ["StationService.asmx"]
+				},
+				"description": "Tìm kiếm stations theo code, name hoặc address"
+			}
+		},
+		{
+			"name": "GetAvailableStationsAsync",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml; charset=utf-8"
+					},
+					{
+						"key": "SOAPAction",
+						"value": "http://tempuri.org/IStationSOAPServices/GetAvailableStationsAsync"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GetAvailableStationsAsync xmlns=\"http://tempuri.org/\">\n    </GetAvailableStationsAsync>\n  </soap:Body>\n</soap:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5046/StationService.asmx",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "5046",
+					"path": ["StationService.asmx"]
+				},
+				"description": "Lấy các stations có sẵn (available)"
+			}
+		},
+		{
+			"name": "CreateStationAsync",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml; charset=utf-8"
+					},
+					{
+						"key": "SOAPAction",
+						"value": "http://tempuri.org/IStationSOAPServices/CreateStationAsync"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <CreateStationAsync xmlns=\"http://tempuri.org/\">\n      <station>\n        <StationCode>ST002</StationCode>\n        <StationName>New Station</StationName>\n        <Address>456 Second St</Address>\n        <City>Hanoi</City>\n        <Province>Hanoi</Province>\n        <Latitude>21.0285</Latitude>\n        <Longitude>105.8542</Longitude>\n        <Capacity>20</Capacity>\n        <CurrentAvailable>20</CurrentAvailable>\n        <Owner>EVCS Company</Owner>\n        <ContactPhone>0987654321</ContactPhone>\n        <ContactEmail>station2@evcs.com</ContactEmail>\n        <Description>New charging station in Hanoi</Description>\n        <IsActive>true</IsActive>\n      </station>\n    </CreateStationAsync>\n  </soap:Body>\n</soap:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5046/StationService.asmx",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "5046",
+					"path": ["StationService.asmx"]
+				},
+				"description": "Tạo station mới"
+			}
+		},
+		{
+			"name": "UpdateStationAsync",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml; charset=utf-8"
+					},
+					{
+						"key": "SOAPAction",
+						"value": "http://tempuri.org/IStationSOAPServices/UpdateStationAsync"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <UpdateStationAsync xmlns=\"http://tempuri.org/\">\n      <station>\n        <StationId>1</StationId>\n        <StationCode>ST001</StationCode>\n        <StationName>Updated Station Name</StationName>\n        <Address>123 Main St Updated</Address>\n        <City>Ho Chi Minh</City>\n        <Province>Ho Chi Minh</Province>\n        <Latitude>10.762622</Latitude>\n        <Longitude>106.660172</Longitude>\n        <Capacity>15</Capacity>\n        <CurrentAvailable>12</CurrentAvailable>\n        <Owner>EVCS Company</Owner>\n        <ContactPhone>0123456789</ContactPhone>\n        <ContactEmail>contact@evcs.com</ContactEmail>\n        <Description>Updated description</Description>\n        <IsActive>true</IsActive>\n      </station>\n    </UpdateStationAsync>\n  </soap:Body>\n</soap:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5046/StationService.asmx",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "5046",
+					"path": ["StationService.asmx"]
+				},
+				"description": "Cập nhật station"
+			}
+		},
+		{
+			"name": "DeleteStationAsync",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml; charset=utf-8"
+					},
+					{
+						"key": "SOAPAction",
+						"value": "http://tempuri.org/IStationSOAPServices/DeleteStationAsync"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <DeleteStationAsync xmlns=\"http://tempuri.org/\">\n      <id>1</id>\n    </DeleteStationAsync>\n  </soap:Body>\n</soap:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5046/StationService.asmx",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "5046",
+					"path": ["StationService.asmx"]
+				},
+				"description": "Xóa station (soft delete - set IsActive = false)"
+			}
+		},
+		{
+			"name": "ActivateStationAsync",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml; charset=utf-8"
+					},
+					{
+						"key": "SOAPAction",
+						"value": "http://tempuri.org/IStationSOAPServices/ActivateStationAsync"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <ActivateStationAsync xmlns=\"http://tempuri.org/\">\n      <id>1</id>\n    </ActivateStationAsync>\n  </soap:Body>\n</soap:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5046/StationService.asmx",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "5046",
+					"path": ["StationService.asmx"]
+				},
+				"description": "Kích hoạt station (set IsActive = true)"
+			}
+		},
+		{
+			"name": "UpdateAvailabilityAsync",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml; charset=utf-8"
+					},
+					{
+						"key": "SOAPAction",
+						"value": "http://tempuri.org/IStationSOAPServices/UpdateAvailabilityAsync"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <UpdateAvailabilityAsync xmlns=\"http://tempuri.org/\">\n      <stationId>1</stationId>\n      <newAvailable>5</newAvailable>\n    </UpdateAvailabilityAsync>\n  </soap:Body>\n</soap:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5046/StationService.asmx",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "5046",
+					"path": ["StationService.asmx"]
+				},
+				"description": "Cập nhật số lượng available của station"
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:5046",
+			"type": "string"
+		},
+		{
+			"key": "soapEndpoint",
+			"value": "/StationService.asmx",
+			"type": "string"
+		}
+	]
+}
+

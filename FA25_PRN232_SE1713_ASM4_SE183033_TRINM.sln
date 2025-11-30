@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36127.28
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EVCS.TriNM.Repositories", "EVCS.TriNM.Repositories\EVCS.TriNM.Repositories.csproj", "{00C1EDE6-A433-8A75-51EE-4495DEEFAF3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EVCS.TriNM.Services", "EVCS.TriNM.Services\EVCS.TriNM.Services.csproj", "{83364328-5194-C1BD-E1E3-E356F1E1B09B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EVCS.SOAPAPIServices.TriNM", "EVCS.SOAPAPIServices.TriNM\EVCS.SOAPAPIServices.TriNM.csproj", "{1926E629-81B9-4B0D-814C-CB2CC9EA6168}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EVCS.SoapClient.ConsoleApp.TriNM", "EVCS.SoapClient.ConsoleApp.TriNM\EVCS.SoapClient.ConsoleApp.TriNM.csproj", "{AC6C32C7-B505-47A4-B755-4C8FF5AFEE56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EVCS.SOAP.WebMVC.TriNM", "EVCS.SOAP.WebMVC.TriNM\EVCS.SOAP.WebMVC.TriNM.csproj", "{3F52C926-D2CA-0E91-D650-D2ED847D17AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{00C1EDE6-A433-8A75-51EE-4495DEEFAF3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00C1EDE6-A433-8A75-51EE-4495DEEFAF3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00C1EDE6-A433-8A75-51EE-4495DEEFAF3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00C1EDE6-A433-8A75-51EE-4495DEEFAF3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83364328-5194-C1BD-E1E3-E356F1E1B09B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83364328-5194-C1BD-E1E3-E356F1E1B09B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83364328-5194-C1BD-E1E3-E356F1E1B09B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83364328-5194-C1BD-E1E3-E356F1E1B09B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1926E629-81B9-4B0D-814C-CB2CC9EA6168}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1926E629-81B9-4B0D-814C-CB2CC9EA6168}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1926E629-81B9-4B0D-814C-CB2CC9EA6168}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1926E629-81B9-4B0D-814C-CB2CC9EA6168}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC6C32C7-B505-47A4-B755-4C8FF5AFEE56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC6C32C7-B505-47A4-B755-4C8FF5AFEE56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC6C32C7-B505-47A4-B755-4C8FF5AFEE56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC6C32C7-B505-47A4-B755-4C8FF5AFEE56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F52C926-D2CA-0E91-D650-D2ED847D17AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F52C926-D2CA-0E91-D650-D2ED847D17AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F52C926-D2CA-0E91-D650-D2ED847D17AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F52C926-D2CA-0E91-D650-D2ED847D17AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D26206C4-9D26-449B-BDAF-9656896A1006}
+	EndGlobalSection
+EndGlobal
